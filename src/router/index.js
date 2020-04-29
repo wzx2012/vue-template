@@ -30,7 +30,7 @@ import Layout from '@/layout'
  * a base page that does not have permission requirements
  * all roles can be accessed
  */
-export const constantRoutes = [
+const routes = [
   {
     path: '/login',
     component: () => import('@/views/login/index'),
@@ -162,7 +162,8 @@ export const constantRoutes = [
   // 404 page must be placed at the end !!!
   { path: '*', redirect: '/404', hidden: true }
 ]
-
+// eslint-disable-next-line no-multiple-empty-lines
+export const constantRoutes = routes
 const createRouter = () => new Router({
   // mode: 'history', // require service support
   scrollBehavior: () => ({ y: 0 }),
